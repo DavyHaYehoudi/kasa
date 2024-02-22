@@ -1,0 +1,32 @@
+.home-container {
+  width: 1240px;
+}
+.banner-home {
+  @include banner-styles("../../../public/images/home.png");
+}
+.banner-about {
+  @include banner-styles("../../../public/images/about.png");
+}
+.main-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  background-color: $fourty-color;
+  border-radius: $radius1;
+  padding: 60px;
+}
+.card {
+  position: relative;
+  width: 340;
+  height: 340px;
+  background-color: $primary-color;
+  border-radius: $radius2;
+
+  p {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: 200px;
+    color: $tertiary-color;
+  }
+}

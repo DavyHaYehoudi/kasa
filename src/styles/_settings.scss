@@ -8,7 +8,14 @@
 //Body
 body {
   font-family: $fontFamily-primary, sans-serif;
-  max-width: 1440px;
+  width: 1440px;
+  background-color: $secondary-color;
+  margin: auto;
+  padding-top: 50px;
+}
+.App {
+  background-color: $tertiary-color;
+  padding: 50px 70px;
 }
 // List styling
 ul {

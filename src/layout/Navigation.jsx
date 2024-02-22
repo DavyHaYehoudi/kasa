@@ -12,7 +12,7 @@ const Navigation = () => {
           </li>
           <li>
             <NavLink to="/about" activeclassname="active">
-              À propos
+              A propos
             </NavLink>
           </li>
         </ul>

@@ -1,11 +1,7 @@
 import React from "react";
 
-const Banner = () => {
-  return (
-    <div>
-      <h1>Chez vous, partout et ailleurs</h1>
-    </div>
-  );
+const Banner = ({ title, page }) => {
+  return <div className={`banner-${page}`}>{title && <h1>{title} </h1>}</div>;
 };
 
 export default Banner;

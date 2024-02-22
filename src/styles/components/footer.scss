@@ -1,4 +1,7 @@
 footer {
+  @include center-flex;
+  flex-direction: column;
+  gap: 50px;
   background-color: $secondary-color;
 
   p {

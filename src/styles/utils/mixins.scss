@@ -1,0 +1,25 @@
+@mixin center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin between-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin banner-styles($image-url) {
+  @include center-flex;
+  height: 223px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("#{$image-url}");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  border-radius: $radius1;
+  margin: 40px 0;
+
+  h1 {
+    color: $tertiary-color;
+  }
+}

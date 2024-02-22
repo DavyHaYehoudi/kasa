@@ -3,7 +3,7 @@ import Navigation from '../layout/Navigation';
 
 const Header = () => {
     return (
-        <div>
+        <div className='header'>
             <img src='/images/LOGO.svg' alt="logo"/>
             <Navigation />
         </div>

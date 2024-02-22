@@ -12,7 +12,6 @@ const Home = () => {
         const data = await customFetch("data/index.json");
         setCards(data);
       } catch (error) {
-        // Gérer les erreurs si nécessaire
         console.error("Erreur lors de la récupération des données:", error);
       }
     };
@@ -21,8 +20,8 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
-      <Banner />
+    <div className="home-container">
+      <Banner title="Chez vous, partout et ailleurs" page="home" />
       <Cards cards={cards} />
     </div>
   );
