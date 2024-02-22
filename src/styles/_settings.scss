@@ -1,0 +1,22 @@
+// Box sizing
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+//Body
+body {
+  font-family: $fontFamily-primary, sans-serif;
+  max-width: 1440px;
+}
+// List styling
+ul {
+  list-style: none;
+}
+
+//links
+a {
+  text-decoration: none;
+  color: inherit;
+}

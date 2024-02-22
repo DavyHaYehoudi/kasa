@@ -1,14 +1,15 @@
+//UTILS
+@import "./utils/mixins.scss";
+@import "./utils/variables.scss";
+
 @import "./settings";
 
 //PAGES
 @import "./pages/home.scss";
 @import "./pages/about.scss";
-@import "./pages/results.scss";
+@import "./pages/result.scss";
 @import "./pages/notFound.scss";
 
 //COMPONENTS
 @import "./components/navigation.scss";
-
-//UTILS
-@import "./utils/mixins.scss";
-@import "./utils/variables.scss"
+@import "./components/footer.scss";
