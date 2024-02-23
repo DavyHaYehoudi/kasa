@@ -1,4 +1,17 @@
 .result{
     width: 1240px;
     margin: auto;
+
+    .wrapper-blocs{
+        @include between-flex;
+    }
+    .content-caption{
+        ul{
+            display: flex;
+            gap: 20px;
+        }
+    }
+    .identity{
+        @include center-flex;
+    }
 }

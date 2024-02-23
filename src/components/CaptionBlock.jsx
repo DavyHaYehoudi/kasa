@@ -2,11 +2,9 @@ import React from "react";
 import Tag from "./Tag";
 
 const CaptionBlock = ({ data, id }) => {
-  const title = data?.find((item) => item.id === id).title;
-  const location = data?.find((item) => item.id === id).location;
-  const tags = data?.find((item) => item.id === id).tags;
+  const { title, location, tags } = data?.find((item) => item.id === id);
   return (
-    <div className="wrapper">
+    <div className="content-caption">
       <h2>{title} </h2>
       <p>{location} </p>
       <ul className="tags">

@@ -111,6 +111,20 @@ a {
   width: 1240px;
   margin: auto;
 }
+.result .wrapper-blocs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.result .content-caption ul {
+  display: flex;
+  gap: 20px;
+}
+.result .identity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 nav a.active {
   border-bottom: 5px solid #ff6060;

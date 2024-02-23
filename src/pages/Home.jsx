@@ -1,24 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Banner from "../components/Banner";
 import Cards from "../components/Cards";
-import { customFetch } from "../service/customFetch";
+import useDataFetch from "../service/hook/useDataFetch";
 
 const Home = () => {
-  const [cards, setCards] = useState();
+  const { data: cards, loading, error } = useDataFetch("data/index.json");
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await customFetch("data/index.json");
-        setCards(data);
-      } catch (error) {
-        console.error("Erreur lors de la récupération des données:", error);
-      }
-    };
+  if (loading) {
+    return <p>Chargement en cours...</p>;
+  }
 
-    fetchData();
-  }, []);
-
+  if (error) {
+    return <p>Erreur lors de la récupération des données : {error.message}</p>;
+  }
   return (
     <div className="home-container">
       <Banner title="Chez vous, partout et ailleurs" page="home" />
