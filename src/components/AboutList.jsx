@@ -5,9 +5,11 @@ import AboutListItem from "./AboutListItem";
 const AboutList = () => {
   return (
     <section>
-      {aboutList.map((item,i) => (
-        <AboutListItem key={i} item={item} />
-      ))}
+      <ul>
+        {aboutList.map((item, i) => (
+          <AboutListItem key={i} item={item} />
+        ))}
+      </ul>
     </section>
   );
 };

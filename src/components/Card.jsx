@@ -5,6 +5,7 @@ const Card = ({ card }) => {
   return (
     <Link to={`/result/${card.id}`}>
       <article className="card">
+        <img src={card.cover} alt="couverture" />
         <p>{card.title}</p>
       </article>
     </Link>
