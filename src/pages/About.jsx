@@ -1,6 +1,6 @@
 import React from 'react';
-import Banner from '../components/Banner';
 import AboutList from '../components/AboutList';
+import Banner from "../shared/Banner"
 
 const About = () => {
     return (

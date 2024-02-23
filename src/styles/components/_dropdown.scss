@@ -1,12 +1,12 @@
 .dropdown {
   h3 {
     font-weight: 600;
+    font-size: $fontSize-dropdown-title;
   }
   .title {
     @include between-flex;
     height: $dropdown-title-height;
     cursor: pointer;
-    font-size: $fontSize-dropdown-title;
     padding: 10px 20px 10px 15px;
     color: $tertiary-color;
     background-color: $primary-color;

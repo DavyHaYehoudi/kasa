@@ -136,23 +136,27 @@ a {
   font-size: 1.2rem;
   font-weight: 500;
 }
-.result .identity {
+.result .content-profile .identity {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
 }
-.result .identity img {
+.result .content-profile .identity img {
   border-radius: 50%;
 }
-.result .identity p {
+.result .content-profile .identity p {
   color: #ff6060;
   font-size: 1.2rem;
   font-weight: 500;
 }
+.result .content-profile .rating {
+  text-align: end;
+  margin: 15px 0;
+}
 .result .info-details {
   display: flex;
-  gap: 20px;
+  gap: 40px;
 }
 .result .info-details .dropdown {
   width: 100%;
@@ -193,6 +197,7 @@ footer p {
 
 .dropdown h3 {
   font-weight: 600;
+  font-size: 1.5rem;
 }
 .dropdown .title {
   display: flex;
@@ -200,7 +205,6 @@ footer p {
   justify-content: space-between;
   height: 3.25rem;
   cursor: pointer;
-  font-size: 1.5rem;
   padding: 10px 20px 10px 15px;
   color: #ffffff;
   background-color: #ff6060;

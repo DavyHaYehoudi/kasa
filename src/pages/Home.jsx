@@ -1,7 +1,7 @@
 import React from "react";
-import Banner from "../components/Banner";
 import Cards from "../components/Cards";
 import useDataFetch from "../service/hook/useDataFetch";
+import Banner from "../shared/Banner";
 
 const Home = () => {
   const { data: cards, loading, error } = useDataFetch("data/index.json");
