@@ -1,0 +1,15 @@
+.notFound{
+    height: 40%;
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    .text-error{
+        color: $primary-color;
+        font-size: $fontSize-text-error;
+    }
+    a{
+        font-size: $fontSize-backHome-error; 
+    }
+}

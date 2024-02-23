@@ -3,14 +3,18 @@ import CaptionBlock from "../components/CaptionBlock";
 import ProfileBlock from "../components/ProfileBlock";
 import Carousel from "../shared/Carousel";
 import Dropdown from "../shared/Dropdown";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useDataFetch from "../service/hook/useDataFetch";
 
 const Result = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const { data, loading, error } = useDataFetch("data/index.json");
   const selectedItem = data?.find((item) => item.id === id);
+  if (!selectedItem) {
+    return navigate("/notFound");
+  }
 
   if (loading) {
     return <p>Chargement en cours...</p>;
