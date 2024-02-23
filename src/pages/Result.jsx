@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CaptionBlock from "../components/CaptionBlock";
 import ProfileBlock from "../components/ProfileBlock";
 import Carousel from "../shared/Carousel";
@@ -12,9 +12,12 @@ const Result = () => {
 
   const { data, loading, error } = useDataFetch("data/index.json");
   const selectedItem = data?.find((item) => item.id === id);
-  if (!selectedItem) {
-    return navigate("/notFound");
-  }
+
+  useEffect(() => {
+    if (!selectedItem && data) {
+      navigate("/notFound");
+    }
+  }, [navigate, selectedItem, data]);
 
   if (loading) {
     return <p>Chargement en cours...</p>;
@@ -23,7 +26,7 @@ const Result = () => {
   if (error) {
     return <p>Erreur lors de la récupération des données : {error.message}</p>;
   }
-  const { description, equipments } = selectedItem;
+  const { description, equipments } = selectedItem || {};
   return (
     <section className="result">
       {data && (

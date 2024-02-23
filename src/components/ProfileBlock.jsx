@@ -2,9 +2,9 @@ import React from "react";
 import { ratingNumber } from "../utils/rating";
 
 const ProfileBlock = ({ data, id }) => {
-  const { name, picture } = data?.find((item) => item.id === id).host;
-  const rating = data?.find((item) => item.id === id).rating;
-  const [firstName, lastName] = name.split(" ");
+  const { name, picture } = data?.find((item) => item.id === id)?.host ||{};
+  const rating = data?.find((item) => item.id === id)?.rating;
+  const [firstName, lastName] = name?.split(" ") ||[];
   if (typeof name !== "string") {
     return null;
   }
