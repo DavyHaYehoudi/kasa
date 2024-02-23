@@ -18,7 +18,19 @@ const Dropdown = ({ title, children }) => {
           alt="flèche indiquant l'affichage du contenu"
         />
       </div>
-      {isOpen && <div className="content">{children}</div>}
+      {isOpen && (
+        <div className="content">
+          {Array.isArray(children) ? (
+            <ul>
+              {children.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          ) : (
+            <p>{children}</p>
+          )}
+        </div>
+      )}
     </div>
   );
 };

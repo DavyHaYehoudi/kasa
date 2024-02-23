@@ -32,4 +32,12 @@
   .right {
     right: 10px;
   }
+  .count{
+    position: absolute;
+    color: white;
+    font-size: $fontSize-carousel-count;
+    left: 50%;
+    bottom:10px;
+    transform: translateX(-50%);
+  }
 }

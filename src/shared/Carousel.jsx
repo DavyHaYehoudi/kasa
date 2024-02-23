@@ -5,6 +5,7 @@ import arrow_forward from "../images/arrow_forward.png";
 const Carousel = ({ data, id }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = data?.find((item) => item.id === id).pictures;
+
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
@@ -28,6 +29,7 @@ const Carousel = ({ data, id }) => {
       <button className="arrow right" onClick={nextImage}>
         <img src={arrow_forward} alt="suivant" />
       </button>
+      <p className="count">{currentImageIndex +1}/{images.length } </p>
     </div>
   );
 };

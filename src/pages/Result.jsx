@@ -10,6 +10,7 @@ const Result = () => {
   const { id } = useParams();
 
   const { data, loading, error } = useDataFetch("data/index.json");
+  const selectedItem = data?.find((item) => item.id === id);
 
   if (loading) {
     return <p>Chargement en cours...</p>;
@@ -18,6 +19,7 @@ const Result = () => {
   if (error) {
     return <p>Erreur lors de la récupération des données : {error.message}</p>;
   }
+  const { description, equipments } = selectedItem;
   return (
     <section className="result">
       {data && (
@@ -27,10 +29,12 @@ const Result = () => {
             <CaptionBlock data={data} id={id} />
             <ProfileBlock data={data} id={id} />
           </div>
-          <div className="info-details">
-            <Dropdown data={data} id={id} />
-            <Dropdown data={data} id={id} />
-          </div>
+          {description && equipments && (
+            <div className="info-details">
+              <Dropdown title={"Description"} children={description} />
+              <Dropdown title={"Équipement"} children={equipments} />
+            </div>
+          )}
         </article>
       )}
     </section>
