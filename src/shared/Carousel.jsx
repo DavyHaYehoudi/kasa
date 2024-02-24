@@ -21,7 +21,7 @@ const Carousel = ({ data, id }) => {
     <div className="carousel">
       {moreThanOne && (
         <button className="arrow left" onClick={prevImage}>
-          <img src={arrow_back} alt="précédant" />{" "}
+          <img src={arrow_back} alt="précédant" className="arrow-img" />{" "}
         </button>
       )}
       {images && (
@@ -33,7 +33,7 @@ const Carousel = ({ data, id }) => {
       )}
       {moreThanOne && (
         <button className="arrow right" onClick={nextImage}>
-          <img src={arrow_forward} alt="suivant" />
+          <img src={arrow_forward} alt="suivant" className="arrow-img" />
         </button>
       )}
       {moreThanOne && (

@@ -8,6 +8,11 @@
   align-items: center;
   justify-content: space-between;
 }
+@mixin end-flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 @mixin banner-styles($image-url) {
   @include center-flex;
   height: calc(12vw + 111px);
@@ -24,7 +29,7 @@
     color: $tertiary-color;
   }
   @media (max-width: 767px) {
-    height: 111px; 
+    height: 111px;
     margin: 40px 0;
   }
 }

@@ -6,5 +6,9 @@ footer {
 
   p {
     color: $tertiary-color;
+    @media (max-width: 425px) {
+      width: 40%;
+      text-align: center;
+    }
   }
 }

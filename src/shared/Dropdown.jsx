@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import arrow from "../images/arrow_open.png"
+import arrow from "../images/arrow_open.png";
 
 const Dropdown = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);

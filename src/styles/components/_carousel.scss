@@ -3,7 +3,6 @@
   max-width: 1240px;
   height: 415px;
   overflow: hidden;
-  margin :40px 0;
   border-radius: $radius2;
 
   .hero-image {
@@ -32,12 +31,28 @@
   .right {
     right: 10px;
   }
-  .count{
+  @media (max-width: 768px) {
+    .arrow-img {
+      width: 50%;
+    }
+    .left {
+      left: -30px;
+    }
+
+    .right {
+      right: -30px;
+    }
+  }
+
+  .count {
     position: absolute;
     color: white;
     font-size: $fontSize-carousel-count;
     left: 50%;
-    bottom:10px;
+    bottom: 10px;
     transform: translateX(-50%);
+    @media (max-width: 425px) {
+      display: none;
+    }
   }
 }

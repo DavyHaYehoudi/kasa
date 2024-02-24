@@ -1,8 +1,8 @@
 import { handleFetchError } from "./handleFetchError";
 
 export const customFetch = async (endpoint, options = {}) => {
-    const baseUrl = process.env.REACT_APP_BASE_URL;
-    const url = `${baseUrl}/${endpoint}`;
+  const baseUrl = process.env.REACT_APP_BASE_URL;
+  const url = `${baseUrl}/${endpoint}`;
 
   const defaultOptions = {
     method: "GET",

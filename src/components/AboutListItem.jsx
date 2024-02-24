@@ -5,7 +5,7 @@ const AboutListItem = ({ item }) => {
   return (
     <li>
       <article>
-        <Dropdown title={item.title} children={item.content}  />
+        <Dropdown title={item.title} children={item.content} />
       </article>
     </li>
   );
