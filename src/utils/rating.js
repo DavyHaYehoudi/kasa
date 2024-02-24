@@ -1,4 +1,3 @@
-import React from "react";
 import starActive from "../images/star-active.png";
 import starInactive from "../images/star-inactive.png";
 export const ratingNumber = (rating) => {
