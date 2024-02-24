@@ -4,7 +4,7 @@ import About from "./pages/About.jsx";
 import Result from "./pages/Result";
 import Footer from "./layout/Footer.jsx";
 import NotFound from "./pages/NotFound.jsx";
-import Header from "./components/Header.jsx";
+import Header from "./layout/Header.jsx";
 
 function App() {
   return (

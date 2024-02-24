@@ -16,6 +16,12 @@ body {
 .App {
   background-color: $tertiary-color;
   padding: 50px 70px;
+  @media (max-width: 768px) {
+    padding: 30px 20px;
+  }
+  @media (max-width: 425px) {
+    padding: 10px;
+  }
 }
 // List styling
 ul {

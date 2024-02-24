@@ -10,7 +10,8 @@
 }
 @mixin banner-styles($image-url) {
   @include center-flex;
-  height: 223px;
+  height: calc(12vw + 111px);
+  transition: height 0.5s ease;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("#{$image-url}");
   background-size: cover;
@@ -21,5 +22,9 @@
 
   h1 {
     color: $tertiary-color;
+  }
+  @media (max-width: 767px) {
+    height: 111px; 
+    margin: 40px 0;
   }
 }

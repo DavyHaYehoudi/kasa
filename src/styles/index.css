@@ -17,6 +17,16 @@ body {
   background-color: #ffffff;
   padding: 50px 70px;
 }
+@media (max-width: 768px) {
+  .App {
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 425px) {
+  .App {
+    padding: 10px;
+  }
+}
 
 ul {
   list-style: none;
@@ -29,15 +39,15 @@ a {
 }
 
 .home-container {
-  width: 1240px;
+  max-width: 1240px;
   margin: auto;
 }
-
-.banner-home {
+.home-container .banner-home {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 223px;
+  height: calc(12vw + 111px);
+  transition: height 0.5s ease;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../../public/images/home.png");
   background-size: cover;
   background-position: center;
@@ -46,55 +56,98 @@ a {
   margin: 40px 0;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
-.banner-home h1 {
+.home-container .banner-home h1 {
   color: #ffffff;
 }
-
-.main-cards-wrapper {
+@media (max-width: 767px) {
+  .home-container .banner-home {
+    height: 111px;
+    margin: 40px 0;
+  }
+}
+.home-container .main-cards-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 60px;
   background-color: #e3e3e3;
   border-radius: 1.5rem;
   padding: 60px;
 }
-
-.card {
+.home-container .main-cards-wrapper .card {
   position: relative;
-  width: 340;
+  width: 340px;
   height: 340px;
   background-color: #ff6060;
   border-radius: 0.625rem;
   transition: box-shadow 0.3s, transform 0.3s;
+  margin: auto;
 }
-.card img {
+.home-container .main-cards-wrapper .card figure {
+  width: 330px;
+  height: 330px;
+  margin: auto;
+  padding: 5px 0;
+}
+.home-container .main-cards-wrapper .card img {
   width: 100%;
   height: 80%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 0.625rem;
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
 }
-.card p {
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-  max-width: 90%;
+.home-container .main-cards-wrapper .card figcaption {
+  padding: 5px;
   color: #ffffff;
 }
-.card:hover {
+.home-container .main-cards-wrapper .card:hover {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   transform: scale(1.01);
 }
+@media (max-width: 500px) {
+  .home-container h1 {
+    font-size: 1.7rem;
+  }
+  .home-container .main-cards-wrapper {
+    padding: 10px 0;
+  }
+}
+@media (max-width: 390px) {
+  .home-container .banner-home {
+    justify-content: start;
+  }
+  .home-container h1 {
+    width: 250px;
+    padding: 10px;
+    text-align: start;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 320px) {
+  .home-container .main-cards-wrapper {
+    padding: 8px 1px;
+  }
+  .home-container .main-cards-wrapper .card {
+    width: 290px !important;
+    height: 290px !important;
+  }
+  .home-container .main-cards-wrapper .card figure {
+    width: 290px !important;
+    height: 290px !important;
+    padding: 4px !important;
+  }
+}
 
 .about-container {
-  width: 1240px;
+  max-width: 1240px;
   margin: auto;
 }
 .about-container .banner-about {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 223px;
+  height: calc(12vw + 111px);
+  transition: height 0.5s ease;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../../public/images/about.png");
   background-size: cover;
   background-position: center;
@@ -106,8 +159,14 @@ a {
 .about-container .banner-about h1 {
   color: #ffffff;
 }
+@media (max-width: 767px) {
+  .about-container .banner-about {
+    height: 111px;
+    margin: 40px 0;
+  }
+}
 .about-container section {
-  width: 1023px;
+  max-width: 1023px;
   margin: auto;
 }
 .about-container article {
@@ -115,7 +174,7 @@ a {
 }
 
 .result {
-  width: 1240px;
+  max-width: 1240px;
   margin: auto;
 }
 .result .wrapper-blocs {
@@ -189,11 +248,21 @@ a {
 nav a.active {
   border-bottom: 5px solid #ff6060;
 }
+@media (max-width: 375px) {
+  nav a.active {
+    border-bottom: 3px solid #ff6060;
+  }
+}
 nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 50px;
+}
+@media (max-width: 425px) {
+  nav ul {
+    gap: 15px;
+  }
 }
 nav li {
   font-size: 1.5rem;
@@ -212,11 +281,20 @@ footer p {
 }
 
 .header {
-  width: 1240px;
+  max-width: 1240px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: auto;
+}
+@media (max-width: 768px) {
+  .header img {
+    width: 145px;
+    font-size: 4vw;
+  }
+  .header li {
+    font-size: 4vw;
+  }
 }
 
 .dropdown h3 {
@@ -251,7 +329,7 @@ footer p {
 
 .carousel {
   position: relative;
-  width: 1240px;
+  max-width: 1240px;
   height: 415px;
   overflow: hidden;
   margin: 40px 0;

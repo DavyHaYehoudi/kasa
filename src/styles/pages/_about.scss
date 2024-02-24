@@ -1,12 +1,12 @@
 .about-container {
-  width: 1240px;
+  max-width: 1240px;
   margin: auto;
   .banner-about {
     @include banner-styles("../../../public/images/about.png");
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   }
   section {
-    width: 1023px;
+    max-width: 1023px;
     margin: auto;
   }
   article {

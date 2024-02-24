@@ -1,5 +1,15 @@
 .header{
-    width: 1240px;
+    max-width: 1240px;
     @include between-flex;
     margin: auto;
+    @media (max-width: 768px) {
+        img {
+          width: 145px;
+          font-size: 4vw;
+        }
+    
+        li{
+          font-size: 4vw;
+        }
+      }
 }

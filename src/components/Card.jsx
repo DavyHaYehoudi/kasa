@@ -5,8 +5,10 @@ const Card = ({ card }) => {
   return (
     <Link to={`/result/${card.id}`}>
       <article className="card">
-        <img src={card.cover} alt="couverture" />
-        <p>{card.title}</p>
+        <figure>
+          <img src={card.cover} alt="couverture" />
+          <figcaption>{card.title}</figcaption>
+        </figure>
       </article>
     </Link>
   );

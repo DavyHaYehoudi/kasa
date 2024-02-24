@@ -2,13 +2,23 @@ nav {
   a {
     &.active {
       border-bottom: 5px solid $primary-color;
+
+      @media (max-width: 375px) {
+        border-bottom: 3px solid $primary-color;
+      }
     }
   }
-  ul{
+
+  ul {
     @include center-flex;
     gap: 50px;
+
+    @media (max-width: 425px) {
+      gap: 15px;
+    }
   }
-  li{
+
+  li {
     font-size: $fontSize-nav-tab;
   }
 }
