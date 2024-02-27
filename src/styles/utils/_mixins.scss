@@ -15,7 +15,7 @@
 }
 @mixin banner-styles($image-url) {
   @include center-flex;
-  height: calc(12vw + 111px);
+  height: 12vw;
   transition: height 0.5s ease;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("#{$image-url}");
